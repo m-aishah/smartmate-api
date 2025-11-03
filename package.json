@@ -71,10 +71,13 @@
     "version": "0.0.1"
   },
   "devDependencies": {
+    "@types/node": "^24.10.0",
+    "aws-cdk-lib": "^2.221.1",
     "chai": "^4.2.0",
     "chai-jest-snapshot": "^2.0.0",
     "chalk": "^2.4.2",
     "chipper": "^1.7.2",
+    "constructs": "^10.4.2",
     "db-migrate": "^0.11.11",
     "db-migrate-mysql": "^1.1.10",
     "deep-equal-in-any-order": "^1.0.21",
