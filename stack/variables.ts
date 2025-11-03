@@ -60,7 +60,7 @@ const envVars: [string, string, string][] = [
 
 // solution stack https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-nodejs.html
 const solutionStackNameFile: string =
-  "64bit Amazon Linux 2023 v6.6.4 running Node.js 22";
+  "64bit Amazon Linux 2023 v6.6.7 running Node.js 22";
 
 // this should be a wildcard certificate arn using AWS ACM in the destination region
 // *.mydomain.com
