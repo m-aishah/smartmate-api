@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  smartmate-api-db:
+    container_name: smartmate-api-mysql-db
+    image: jamielsharief/mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: "smartmate_api_db"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - vol-smartmate-api-db:/var/lib/mysql
+volumes:
+  vol-smartmate-api-db:

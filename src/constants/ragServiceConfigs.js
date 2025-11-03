@@ -1,0 +1,7 @@
+module.exports = {
+  DOCUMENT_SOURCE: "chat_upload",
+  DEFAULT_FILE_TYPE: "pdf",
+  DEFAULT_FILENAME: "document",
+  DEFAULT_MAX_RELEVANT_CHUNKS: 5,
+  DEFAULT_SIMILARITY_THRESHOLD: 0.3
+};
