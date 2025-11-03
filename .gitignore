@@ -1,7 +1,12 @@
 node_modules
 .env
 *.env
+
+# CDK Artifacts
+cdk.out/
+
 # Elastic Beanstalk Files
+eb-bundle-output/
 .elasticbeanstalk/*
 !.elasticbeanstalk/config.yml
 !.elasticbeanstalk/*.cfg.yml
