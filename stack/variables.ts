@@ -2,7 +2,7 @@ const envVars: [string, string, string][] = [
   [
     "aws:elasticbeanstalk:application:environment",
     "MAILGUN_API_KEY",
-    process.env.MAILGUN_API_KEY
+    process.env.MAILGUN_API_KEY || "" 
   ],
   [
     "aws:elasticbeanstalk:application:environment",
@@ -17,12 +17,12 @@ const envVars: [string, string, string][] = [
   [
     "aws:elasticbeanstalk:application:environment",
     "JWT_SECRET",
-    process.env.JWT_SECRET
+    process.env.JWT_SECRET || ""
   ],
   [
     "aws:elasticbeanstalk:application:environment",
     "PASSWORD_SALT",
-    process.env.PASSWORD_SALT
+    process.env.PASSWORD_SALT || ""
   ],
   [
     "aws:elasticbeanstalk:application:environment",
