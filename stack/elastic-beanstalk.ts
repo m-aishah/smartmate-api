@@ -235,7 +235,7 @@ export class ElbStack extends Stack {
         {
           namespace: "aws:ec2:instances",
           optionName: "InstanceTypes",
-          value: props?.instanceTypes ?? "t2.small",
+          value: props?.instanceTypes ?? "t3.micro",
         },
         // https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatchlogs.html
         {
