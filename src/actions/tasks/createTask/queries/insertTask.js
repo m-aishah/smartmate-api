@@ -1,4 +1,8 @@
-const { submitQuery, getInsertId } = require("~root/lib/database");
+const {
+  submitQuery,
+  getInsertId,
+  sqlValueOrNull
+} = require("~root/lib/database");
 
 const insertTask = ({
   userId,
@@ -25,7 +29,7 @@ const insertTask = ({
         ${description},
         ${completed},
         ${priority},
-        ${dueDate}
+        ${sqlValueOrNull(dueDate)}
     )
 `;
 

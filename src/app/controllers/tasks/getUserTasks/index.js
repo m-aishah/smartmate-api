@@ -9,9 +9,7 @@ const getUserTasks = async (req, res) => {
       userId
     });
 
-    res.send({
-      tasks
-    });
+    res.send(tasks);
   } catch (err) {
     handleAPIError(res, err);
   }

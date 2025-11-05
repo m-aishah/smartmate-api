@@ -21,7 +21,7 @@ const postTaskSchema = yup.object().shape({
   dueDate: yup
     .date()
     .label("Task Due Date")
-    .required("The task due date is required")
+    .nullable()
     .typeError("The task due date must be a valid date"),
   completed: yup
     .boolean()
