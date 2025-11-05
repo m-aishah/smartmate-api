@@ -7,7 +7,7 @@ const createUser = async ({
   password,
   userTypeId
 }) => {
-  const user = await insertUser({
+  const insertedUser = await insertUser({
     firstName,
     lastName,
     email,
@@ -15,7 +15,7 @@ const createUser = async ({
     userTypeId
   });
 
-  return { user };
+  return { insertedUser };
 };
 
 module.exports = createUser;

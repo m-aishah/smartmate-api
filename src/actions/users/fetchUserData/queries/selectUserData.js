@@ -11,8 +11,8 @@ const selectUserData = ({ userId }) => submitQuery`
         year_of_study,
         current_semester AS semester,
         language_preference,
-        user_analytics.streak,
-        user_analytics.total_hours_studied AS hours_studied
+        streak,
+        total_hours_studied
     FROM
         users
     LEFT JOIN user_analytics ON users.user_id = user_analytics.user_id

@@ -7,11 +7,7 @@ const getUserData = async (req, res) => {
   try {
     const userData = await fetchUserData({ userId });
 
-    res.status(200).send({
-      success: true,
-      message: "User data retrieved successfully",
-      user: userData
-    });
+    res.status(200).send(userData);
   } catch (err) {
     handleAPIError(res, err);
   }

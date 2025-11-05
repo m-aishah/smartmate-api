@@ -2,7 +2,7 @@ require("module-alias/register");
 const helmet = require("helmet");
 const express = require("express");
 const cors = require("cors");
-const cron = require("node-cron");
+// const cron = require("node-cron");
 const rateLimit = require("express-rate-limit");
 const compression = require("compression");
 const morgan = require("morgan");
@@ -11,7 +11,7 @@ const qs = require("qs");
 // prevent running against production database by mistake
 require("~root/utils/exitIfProductionDatabase")();
 
-const updateSummarizationTasksStatuses = require("~root/services/updateSummarizationTasksStatuses");
+// const updateSummarizationTasksStatuses = require("~root/services/updateSummarizationTasksStatuses");
 
 const port = process.env.PORT || 3001;
 const app = express();
@@ -51,14 +51,14 @@ app.use(router);
 app.listen(port, () => monitoring.log(`API listening on port ${port}!`));
 
 // Cron job to update summarization tasks statuses every 2 minutes
-cron.schedule("0 */2 * * * *", async () => {
-  monitoring.log("Updating status of summarisation tasks");
-  try {
-    await updateSummarizationTasksStatuses();
-    monitoring.log("Summarisation tasks status updated successfully");
-  } catch (error) {
-    monitoring.error("Error updating summarisation tasks status:", error);
-  }
-});
+// cron.schedule("0 */2 * * * *", async () => {
+//   monitoring.log("Updating status of summarisation tasks");
+//   try {
+//     await updateSummarizationTasksStatuses();
+//     monitoring.log("Summarisation tasks status updated successfully");
+//   } catch (error) {
+//     monitoring.error("Error updating summarisation tasks status:", error);
+//   }
+// });
 
 module.exports = app;
